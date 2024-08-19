@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1><center><b>Online Quiz</b></center></h1>
+    <form id="quizForm">
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. What does CPU stand for?</h3>
+            <label><input type="radio" name="q1" value="a"> A. Central Process Unit</label><br>
+            <label><input type="radio" name="q1" value="b"> B. Central Processing Unit</label><br>
+            <label><input type="radio" name="q1" value="c"> C. Computer Personal Unit</label><br>
+            <label><input type="radio" name="q1" value="d"> D. Central Processor Unit</label>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. Which programming language is known as the language of the web?</h3>
+            <label><input type="radio" name="q2" value="a"> A. Python</label><br>
+            <label><input type="radio" name="q2" value="b"> B. Java</label><br>
+            <label><input type="radio" name="q2" value="c"> C. JavaScript</label><br>
+            <label><input type="radio" name="q2" value="d"> D. C++</label>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. What is the main function of an operating system?</h3>
+            <label><input type="radio" name="q3" value="a"> A. To manage hardware and software resources</label><br>
+            <label><input type="radio" name="q3" value="b"> B. To compile programs</label><br>
+            <label><input type="radio" name="q3" value="c"> C. To design websites</label><br>
+            <label><input type="radio" name="q3" value="d"> D. To run games</label>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. In which year was the Python programming language created?</h3>
+            <label><input type="radio" name="q4" value="a"> A. 1989</label><br>
+            <label><input type="radio" name="q4" value="b"> B. 1991</label><br>
+            <label><input type="radio" name="q4" value="c"> C. 1995</label><br>
+            <label><input type="radio" name="q4" value="d"> D. 2000</label>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. What does HTML stand for?</h3>
+            <label><input type="radio" name="q5" value="a"> A. Hyper Text Markup Language</label><br>
+            <label><input type="radio" name="q5" value="b"> B. Hyperlinks and Text Markup Language</label><br>
+            <label><input type="radio" name="q5" value="c"> C. Home Tool Markup Language</label><br>
+            <label><input type="radio" name="q5" value="d"> D. Hyperlinking Textual Markup Language</label>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <h3>6. What does SQL stand for?</h3>
+            <label><input type="radio" name="q6" value="a"> A. Structured Query Language</label><br>
+            <label><input type="radio" name="q6" value="b"> B. Simple Query Language</label><br>
+            <label><input type="radio" name="q6" value="c"> C. Sequential Query Language</label><br>
+            <label><input type="radio" name="q6" value="d"> D. Structured Query Logic</label>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <h3>7. What is a commonly used data structure to implement a priority queue?</h3>
+            <label><input type="radio" name="q7" value="a"> A. Stack</label><br>
+            <label><input type="radio" name="q7" value="b"> B. Queue</label><br>
+            <label><input type="radio" name="q7" value="c"> C. Heap</label><br>
+            <label><input type="radio" name="q7" value="d"> D. Linked List</label>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <h3>8. Who is known as the father of computers?</h3>
+            <label><input type="radio" name="q8" value="a"> A. Alan Turing</label><br>
+            <label><input type="radio" name="q8" value="b"> B. Charles Babbage</label><br>
+            <label><input type="radio" name="q8" value="c"> C. John von Neumann</label><br>
+            <label><input type="radio" name="q8" value="d"> D. Bill Gates</label>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <h3>9. Which of the following is not an OOP (Object-Oriented Programming) principle?</h3>
+            <label><input type="radio" name="q9" value="a"> A. Inheritance</label><br>
+            <label><input type="radio" name="q9" value="b"> B. Encapsulation</label><br>
+            <label><input type="radio" name="q9" value="c"> C. Polymorphism</label><br>
+            <label><input type="radio" name="q9" value="d"> D. Compilation</label>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <h3>10. What is the time complexity of binary search?</h3>
+            <label><input type="radio" name="q10" value="a"> A. O(n)</label><br>
+            <label><input type="radio" name="q10" value="b"> B. O(log n)</label><br>
+            <label><input type="radio" name="q10" value="c"> C. O(n log n)</label><br>
+            <label><input type="radio" name="q10" value="d"> D. O(n^2)</label>
+        </div>
+
+        <input type="submit" value="Submit Quiz">
+    </form>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Correct answers
+            const correctAnswers = {
+                q1: 'b',
+                q2: 'c',
+                q3: 'a',
+                q4: 'b',
+                q5: 'a',
+                q6: 'a',
+                q7: 'c',
+                q8: 'b',
+                q9: 'd',
+                q10: 'b'
+            };
+
+            let score = 0;
+            const answers = {};
+
+            // Check each question
+            for (let question in correctAnswers) {
+                const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedOption) {
+                    answers[question] = selectedOption.value;
+                    if (selectedOption.value === correctAnswers[question]) {
+                        score++;
+                    }
+                } else {
+                    answers[question] = null;
+                }
+            }
+
+            // Save the score and answers to local storage
+            localStorage.setItem('quizScore', score);
+            localStorage.setItem('quizAnswers', JSON.stringify(answers));
+
+            // Redirect to the results page
+            window.location.href = 'result.html';
+        });
+    </script>
+</body>
+</html>

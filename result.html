@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz Results</h1>
+    <p id="score"></p>
+    <a href="index.html">Back to Quiz</a>
+
+    <script>
+        // Retrieve the score from local storage
+        const score = localStorage.getItem('quizScore');
+        
+        if (score !== null) {
+            document.getElementById('score').innerText = `Your score is ${score} out of 10`;
+        } else {
+            document.getElementById('score').innerText = `No score available.`;
+        } 
+    </script>
+</body>
+</html>
